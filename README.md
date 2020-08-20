@@ -30,3 +30,7 @@ A simply packaging of baidu maps sdk（5.3.2）
   
 </metadata>
 ```
+
+### Screenshot
+
+![](https://github.com/dorisoy/Xamarin.Forms.BaiduMaps/blob/master/Screenshot_20190718_193103_com.dcms.client.jpg?raw=true)
