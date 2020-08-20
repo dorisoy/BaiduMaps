@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{248DAAAE-A59C-45B0-9751-E859BBEB8F53}</ProjectGuid>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{77efb91c-a7e9-4b0e-a7c5-31eeec3c6d46}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaiduMapBinding</RootNamespace>
+    <AssemblyName>BaiduMapBinding</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <NoWarn>0109;1006;0051;</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Additions\AboutAdditions.txt" />
+    <EmbeddedNativeLibrary Include="Jars\arm64-v8a\libBaiduMapSDK_base_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\arm64-v8a\libBaiduMapSDK_map_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\arm64-v8a\liblocSDK7b.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi-v7a\libBaiduMapSDK_base_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi-v7a\libBaiduMapSDK_map_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi-v7a\liblocSDK7b.so" />
+    <EmbeddedNativeLibrary Include="Jars\x86\libBaiduMapSDK_base_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\x86\libBaiduMapSDK_map_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\x86\liblocSDK7b.so" />
+    <EmbeddedNativeLibrary Include="Jars\x86_64\libBaiduMapSDK_base_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\x86_64\libBaiduMapSDK_map_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\x86_64\liblocSDK7b.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi\libBaiduMapSDK_base_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi\libBaiduMapSDK_map_v5_3_2.so" />
+    <EmbeddedNativeLibrary Include="Jars\armeabi\liblocSDK7b.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\Metadata.xml" />
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\BaiduLBS_Android.jar" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
