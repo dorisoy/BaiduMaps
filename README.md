@@ -1,6 +1,6 @@
 # Xamarin.Forms.BaiduMaps
 
-Application of baidu map in xamarin, a simply packaging of baidu maps sdk（5.3.2/6.4/7.0）
+Xamarin Android binding library for Baidumap sdk（5.3.2/6.4/7.0）
 
 ```xml
 <metadata>
