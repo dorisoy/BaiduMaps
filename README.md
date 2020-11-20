@@ -275,8 +275,9 @@ BaiduMap 地图和定位在Xamarin.Android/Xamarin.Forms 中的应用（5.3.2/6.
         }
     }
 ```
-**
-在Xamarin.Forms 中，如果你使用基本地图视图模式，并且在加载地图时开始定位服务，你可以自定义一个MapView，定义一个IBaiduLocationService 接口用来创建位置服务，如下：**
+
+**在Xamarin.Forms 中，如果你使用基本地图视图模式，并且在加载地图时开始定位服务，你可以自定义一个MapView，定义一个IBaiduLocationService 接口用来创建位置服务，如下：**
+
 ```csharp
 public class Map : View
     {
@@ -582,8 +583,7 @@ protected override void OnDisappearing()
 }
 ```
 
-**
-你也可以把SDK进程捆绑在主进程中，去掉 android:process=":remote"，
+**你也可以把SDK进程捆绑在主进程中，去掉 android:process=":remote"，
 然后把 LocationClientOption 的 ScanSpan 设置为0，默认0，即仅定位一次，然后自定义一个Service 
 在服务里定义频率执行间隔定位，当然，你可以使用WorkManager，使用PeriodicWorkRequest 定义一个Worker间隔定位， 例如：**
 
